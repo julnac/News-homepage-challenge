@@ -40,10 +40,12 @@ h3 {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--Very_dark_blue);
+  margin: 0.8em 0;
 }
 
 p {
   color: var(--Dark_grayish_blue);
+  line-height: 1.5em;
 }
 
 header {
@@ -61,8 +63,8 @@ header .logo {
   background: url(../assets/images/logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 40px;
-  height: 25px;
+  width: 46px;
+  height: 31px;
 }
 
 nav {
@@ -73,22 +75,28 @@ nav {
   height: 100vh;
   width: 68%;
   z-index: 2;
-  display: none;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
 }
-
-ul {
+nav ul {
   list-style-type: none;
   padding: 0;
   margin-top: 8em;
 }
-ul a {
-  color: black;
+nav ul a {
+  color: var(--Very_dark_blue);
   padding: 0.75em 2em;
   display: block;
   width: 100%;
 }
-ul a:hover {
-  background: rgb(232, 220, 220);
+nav ul a:hover {
+  color: var(--soft_orange);
+}
+nav .close {
+  width: 32px;
+  height: 31px;
+  float: right;
+  margin: 1.6em;
 }
 
 .hero-image {
@@ -112,6 +120,7 @@ button a {
 .new {
   background-color: var(--Very_dark_blue);
   padding: 1.3em;
+  margin: 4em 0;
 }
 .new h2 {
   color: var(--soft_orange);
@@ -119,9 +128,37 @@ button a {
 .new h3 {
   color: var(--Off_white);
 }
+.new p {
+  color: var(--Grayish_blue);
+}
 .new .line {
-  background-color: var(--Off_white);
-  height: 0.5px;
+  background-color: var(--Dark_grayish_blue);
+  height: 0.01em;
+  margin: 2em 0;
+}
+
+.article {
+  display: flex;
+  margin: 2em 0;
+  height: 120px;
+}
+.article img {
+  width: 100px;
+  height: 120px;
+}
+.article .content {
+  margin-left: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.article .content h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.article .content p {
+  margin: 0;
 }
 
 .attribution {

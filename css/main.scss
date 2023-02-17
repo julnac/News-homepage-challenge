@@ -36,9 +36,11 @@ h3{
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--Very_dark_blue);
+    margin: 0.8em 0;
 }
 p{
-    color: var(--Dark_grayish_blue)
+    color: var(--Dark_grayish_blue);
+    line-height: 1.5em;
 }
 header{
     display: flex;
@@ -55,8 +57,8 @@ header{
         background-size: contain;
         background-repeat: no-repeat;
 
-        width: 40px;
-        height: 25px;
+        width: 46px;
+        height: 31px;
     }
 }
 nav{
@@ -68,25 +70,29 @@ nav{
     width: 68%;
     z-index: 2;
 
-    // transform: translateX(100%);
-    // transition: transform .5s ease-in-out;
-    display: none;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 8em;
-
-    a {
-        color: black;
-        padding: .75em 2em;
-        display: block;
-        width: 100%;
-
-        &:hover {
-            background: rgb(232, 220, 220);
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8em;
+    
+        a {
+            color: var(--Very_dark_blue);
+            padding: .75em 2em;
+            display: block;
+            width: 100%;
+    
+            &:hover {
+                color: var(--soft_orange);
+            }
         }
+    }
+    .close{
+        width: 32px;
+        height: 31px;
+        float: right;
+        margin: 1.6em;
     }
 }
 .hero-image{
@@ -108,15 +114,43 @@ button{
 .new {
     background-color: var(--Very_dark_blue);
     padding: 1.3em;
+    margin: 4em 0;
     h2{
         color: var(--soft_orange);
     }
     h3{
         color: var(--Off_white);
     }
+    p {
+        color: var(--Grayish_blue);
+    }
     .line {
-        background-color: var(--Off_white);
-        height: 0.5px;
+        background-color: var(--Dark_grayish_blue);
+        height: 0.01em;
+        margin: 2em 0;
+    }
+}
+.article {
+    display: flex;
+    margin: 2em 0;
+    height: 120px;
+    img {
+        width: 100px;
+        height: 120px;
+    }
+    .content {
+        margin-left: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h3{
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+        p{
+            margin: 0;
+        }
     }
 }
 .attribution { font-size: 11px; text-align: center; }
