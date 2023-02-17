@@ -3,7 +3,7 @@ body {
     font-size: 15px;
     font-weight: 400;
     background-color: var(--Off_white);
-    margin: 0 1.3em 0 1.3em;
+    margin: 0 1.3em;
 }
 
 :root {
@@ -25,6 +25,7 @@ h1{
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--Very_dark_blue);
+    margin: .7em 0;
 }
 h2 {
     font-size: 2rem;
@@ -101,6 +102,12 @@ nav{
     width: 100%;
     height: 45vh;
 }
+.sub-header p{
+    margin: 1.5em 0;
+}
+.header h1{
+    margin: 0.5em 0 0 0;
+}
 button{
     text-transform: uppercase;
     background-color: var(--soft_red);
@@ -147,10 +154,115 @@ button{
             margin: 0;
             font-size: 1rem;
             font-weight: 800;
+            letter-spacing: .05rem;
         }
         p{
             margin: 0;
         }
+    }
+}
+
+@media only screen and (min-width: 680px){
+
+    body {
+        margin: 0 5em;
+    }
+}
+@media only screen and (min-width: 900px){
+    .hamburger{
+        display: none;
+    }
+    nav{
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+        svg.close{
+            display: none;
+        }
+        ul{
+            display: flex;
+            margin: 0;
+            width: 29em;
+            justify-content: space-between;
+            a {
+                color: var(--Dark_grayish_blue);
+                font-weight: 400;
+                padding: 0;
+
+                &:hover {
+                    color: var(--soft_orange);
+                }
+            }
+        }
+    }
+    .articles{
+        display: flex;
+        justify-content: space-between;
+        .article{
+        width: 32%;
+        
+        }
+    }
+}
+@media only screen and (min-width: 1440px){
+    body {
+        margin: 0 auto;
+        width: 1100px;
+
+    }
+    .hero-image{
+        background: url(../assets/images/image-web-3-desktop.jpg);
+        background-size: cover;
+        
+    }
+    main{
+        height: 81vh;
+        .page{
+            height: 54vh;
+            display: flex;
+            justify-content: space-between;
+            .hero{
+                width: 65%;
+                .hero-image{
+                    height: 60%;
+                }
+                .hero-text{
+                    display: flex;
+                    justify-content: space-between;
+                    height: 40%;
+                    .header{
+                        width: 20em;
+                        h1{
+                            font-size: 3rem;
+                            line-height: 1.1em;
+                        }
+                    }
+                    .sub-header{
+                        width: 23em;
+                        p{
+                            margin-top: 2em;
+                            margin-bottom: 1.5em;
+
+                        }
+                    }
+                }
+            }
+            .new{
+                width: 28.4%;
+                margin: 0;
+            }
+        }
+        .articles{
+            height: 27vh;
+            align-items: center;
+        }
+    }
+    footer{
+        height: 7vh;
+        
     }
 }
 .attribution { font-size: 11px; text-align: center; }
